@@ -1,0 +1,48 @@
+\documentclass[twocolumn]{article}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{caption}
+
+\begin{document}
+\title{Discrete Assignment (10.5.3.20)}
+\author{Avani Chouhan \\
+        EE23BTECH11205}
+\date{}  % Remove date
+\maketitle
+
+\textbf{Question : }\\
+The sum of some terms of G.P. is 315 whose first term and the common ratio are 5 and 2, respectively. Find the last term and the number of terms.\\
+\textbf{Solution : }\\
+Given:
+\begin{align}
+x(0) &= 5 \\
+r &= 2 \\
+x(n) &= x(0)r^n\\
+x(z) &= \frac{x(0)}{1-rz^{-1}}\\
+S(z) &= X(z)U(z)\\
+S(z) &= \frac{x(0)(\frac{r}{1-rz^{-1}}-\frac{1}{1-z^{-1}})}{r-1}
+\end{align}
+By contour integration:
+\begin{equation}
+s(n) = x(0)\left(\frac{r^{n+1}-1}{r-1}\right)u(n)
+\label{eq:eq1}
+\end{equation}
+
+From \eqref{eq:eq1}:
+\begin{align}
+315 &= 5(2^{n+1}- 1)  \\
+63 &= 2^{n+1}-1  \\
+64 &= 2^{n+1} \\
+n &= 5
+\end{align}
+
+\begin{align}
+x(n) &= x(0) \cdot r^{n}\\
+x(5) &= 5 \cdot 2^{5} \\
+ &= 160 
+\end{align}
+
+Therefore, the number of terms is 6, and the last term is 160.
+\end{document}
+
